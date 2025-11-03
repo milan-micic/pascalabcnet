@@ -1,6 +1,6 @@
-Program kruzici;
+Program PrimitivniOblici;
 
-uses GraphABC;                      // Modul za Grafiku za PascalABC
+Uses GraphABC;                      // Modul za Grafiku za PascalABC
 
 Begin
   {**
@@ -15,7 +15,7 @@ Begin
 
     @param Title
   **} 
-  SetWindowTitle('Primer Broj 1');
+  SetWindowTitle('Primitivni Oblici');
   {**
     Boja prozora
 
@@ -31,6 +31,7 @@ Begin
     @param Krajna tacka linije po duzini
     @param Krajna tacka linije po visini
   **}
+  
   line(150, 50, 150, 550);
   {**
     Crtanje Pravougaonika
@@ -110,4 +111,28 @@ Begin
   **}
   TextOut(180,300, 'TEXT');
   FloodFill(180,300,clRed);
+
+  {**
+    Crtanje tacke
+
+    @param x pozicija
+    @param y pozicija
+    @param boja
+  **}
+  PutPixel(120,120,clBlue);
+
+  SetPenWidth(4);
+  SetPenColor(clPurple);
+  SetBrushColor(clBlue);
+  Ellipse(160,160,260,220);
+
+  Brush.Color:= ARGB(128,0, 245, 0);
+  RoundRect(250,200,100,350,20,20);
+
+  DrawPolygon((20,350),(70,370),(50,400),(30,450),(130,360));
+
+  Pen.Color := RGB(0, 245, 0);
+  PolyLine((20,470),(70,470),(50,500),(30,550),(130,460));
+
+  SaveWindow('PrimitivniOblici.bmp');
 End.
