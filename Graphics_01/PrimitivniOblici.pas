@@ -1,6 +1,9 @@
 Program PrimitivniOblici;
 
-Uses GraphABC;                      // Modul za Grafiku za PascalABC
+{** 
+  Modul za Grafiku za PascalABC
+**}
+Uses GraphABC;
 
 Begin
   {**
@@ -52,7 +55,8 @@ Begin
   circle(55, 55, 25);
 
   {**
-    Popunjava Bojom Graficke Oblike
+    Popunjava Bojom oblike kod kojih ne mozemo koristiti Brush
+    npr. oblici nacrtani drugim oblicima(linije,arc itd)
 
     @param pozicija po duzini
     @param pozicija po visini
@@ -103,7 +107,7 @@ Begin
   **}
   SetFontName('Calibri');
   {**
-    Yekst
+    Tekst
 
     @param Pozicija teksta po duzini
     @param Pozicija teksta po visini
@@ -129,10 +133,31 @@ Begin
   Brush.Color:= ARGB(128,0, 245, 0);
   RoundRect(250,200,100,350,20,20);
 
+  {**
+    Poligon
+
+    ((X1,Y1),(X2,Y2),...(Xn,Yn))
+
+    @param x pozicija
+    @param y pozicija
+  **}
   DrawPolygon((20,350),(70,370),(50,400),(30,450),(130,360));
 
   Pen.Color := RGB(0, 245, 0);
+  {**
+    PoliLinija
+
+    ((X1,Y1),(X2,Y2),...(Xn,Yn))
+
+    @param x pozicija
+    @param y pozicija
+  **}
   PolyLine((20,470),(70,470),(50,500),(30,550),(130,460));
 
+  {**
+    Snimanje izvrsenje programa u slici
+
+    @param putanja i ime slike
+  **}
   SaveWindow('PrimitivniOblici.bmp');
 End.
