@@ -56,7 +56,7 @@ Begin
     end;
 
     Redraw;
-    SaveWindow('SnowProgramShow.bmp');
+    SaveWindow('SnowProgramShow.png');
   until (fEND);
 
 
