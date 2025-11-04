@@ -51,10 +51,13 @@ Begin
       sn[i].x := sn[i].x + sn[i].dx;
       if sn[i].y > H then begin
         sn[i].y := -10;
-        sn[i].x := Random(9*W)-W;
+        sn[i].x := Random(3*W)-W;
       end;
     end;
 
     Redraw;
+    SaveWindow('SnowProgramShow.bmp');
   until (fEND);
+
+
 End.
