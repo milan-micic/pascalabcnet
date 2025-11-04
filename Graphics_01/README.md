@@ -27,4 +27,4 @@ Kako koristiti boju za:
   + RGB i ARGB
   + Snimanje izgleda programa
 
-![Primer1](Graphics_01/PrimitivniOblici.bmp "Primer 1")
+![Primer1](PrimitivniOblici.bmp "Primer 1")
